@@ -1,0 +1,32 @@
+
+// Define the Camper component
+class Camper extends React.Component {
+  render() {
+    return <p>{this.props.name}</p>;
+  }
+}
+
+// Set default props and propTypes for Camper
+Camper.defaultProps = {
+  name: 'CamperBot'
+};
+Camper.propTypes = {
+  name: PropTypes.string.isRequired
+};
+
+// Define the CampSite component
+class CampSite extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
+    return (
+      <div>
+        <Camper />
+      </div>
+    );
+  }
+}
+
+// Export the CampSite component
